@@ -3,7 +3,7 @@ import './App.scss';
 import Home from "../components/Pages/Home";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from "../components/Pages/Login";
-import {ThemeContext, themes} from "../api/Theme";
+// import {ThemeContext, themes} from "../api/Theme";
 import musicDB from "../db/music";
 import {useDispatch, useSelector} from "react-redux";
 import {setPlaylist} from "../actions/actions";
@@ -29,7 +29,7 @@ const App = () => {
     },[dispatch, language]);
 
     return (
-        <ThemeContext.Provider value={themes.light}>
+        // <ThemeContext.Provider value={themes.light}>
             <>
                 <Router>
                     <Switch>
@@ -38,7 +38,7 @@ const App = () => {
                     </Switch>
                 </Router>
             </>
-        </ThemeContext.Provider>
+        // </ThemeContext.Provider>
     );
 }
 
